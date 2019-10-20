@@ -1,4 +1,4 @@
-[gd_scene load_steps=35 format=2]
+[gd_scene load_steps=39 format=2]
 
 [ext_resource path="res://Player.gd" type="Script" id=1]
 [ext_resource path="res://assets/Colors.material" type="Material" id=2]
@@ -7,8 +7,12 @@
 [ext_resource path="res://assets/GunMaterial.material" type="Material" id=5]
 [ext_resource path="res://assets/MuzzleFlash.material" type="Material" id=6]
 [ext_resource path="res://assets/Gun_Emission.material" type="Material" id=7]
-[ext_resource path="res://assets/32-32_white.png" type="Texture" id=8]
-[ext_resource path="res://assets/Titillium-Regular.otf" type="DynamicFontData" id=9]
+[ext_resource path="res://AnimationPlayer_Manager.gd" type="Script" id=8]
+[ext_resource path="res://Weapon_Rifle.gd" type="Script" id=9]
+[ext_resource path="res://Weapon_Knife.gd" type="Script" id=10]
+[ext_resource path="res://Weapon_Pistol.gd" type="Script" id=11]
+[ext_resource path="res://assets/32-32_white.png" type="Texture" id=12]
+[ext_resource path="res://assets/Titillium-Regular.otf" type="DynamicFontData" id=13]
 
 [sub_resource type="CapsuleShape" id=1]
 radius = 1.2
@@ -857,6 +861,20 @@ tracks/34/loop_wrap = true
 tracks/34/imported = true
 tracks/34/enabled = true
 tracks/34/keys = PoolRealArray( 0, 1, 5.96046e-08, 1.86265e-08, 1.3411e-07, -0.546097, 0.0503074, 0.0508105, 0.834665, 1, 1, 1, 1, 1, 5.96046e-08, 1.86265e-08, 1.3411e-07, -0.546097, 0.0503074, 0.0508105, 0.834665, 1, 1, 1 )
+tracks/35/type = "method"
+tracks/35/path = NodePath("Animation_Player")
+tracks/35/interp = 1
+tracks/35/loop_wrap = true
+tracks/35/imported = false
+tracks/35/enabled = true
+tracks/35/keys = {
+"times": PoolRealArray( 0.2 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [  ],
+"method": "animation_callback"
+} ]
+}
 
 [sub_resource type="Animation" id=10]
 resource_name = "Knife_idle"
@@ -1848,6 +1866,20 @@ tracks/34/loop_wrap = true
 tracks/34/imported = true
 tracks/34/enabled = true
 tracks/34/keys = PoolRealArray( 0, 1, 1.54972e-06, -9.574e-07, -5.1409e-07, 0.00332353, -0.0589074, 0.159316, 0.985463, 1, 1, 1, 0.0666667, 1, 1.54972e-06, -9.574e-07, -5.1409e-07, -0.0508508, -0.0403509, 0.175271, 0.982378, 1, 1, 1, 0.133333, 1, 1.54972e-06, -9.574e-07, -5.1409e-07, -0.131989, -0.0121728, 0.198097, 0.971179, 1, 1, 1, 0.2, 1, 1.54972e-06, -9.574e-07, -5.1409e-07, -0.131989, -0.0121728, 0.198097, 0.971179, 1, 1, 1, 0.266667, 1, 2.98023e-07, -1.09337e-06, 1.78814e-07, -0.0508508, -0.0403509, 0.175271, 0.982378, 1, 1, 1, 0.333333, 1, -1.78814e-07, -9.46224e-07, 8.9407e-08, 0.00332355, -0.0589073, 0.159316, 0.985463, 1, 1, 1, 0.666667, 1, 1.54972e-06, -9.574e-07, -5.1409e-07, 0.00332353, -0.0589074, 0.159316, 0.985463, 1, 1, 1 )
+tracks/35/type = "method"
+tracks/35/path = NodePath("Animation_Player")
+tracks/35/interp = 1
+tracks/35/loop_wrap = true
+tracks/35/imported = false
+tracks/35/enabled = true
+tracks/35/keys = {
+"times": PoolRealArray( 0.2 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [  ],
+"method": "animation_callback"
+} ]
+}
 
 [sub_resource type="Animation" id=14]
 length = 0.0416667
@@ -3086,6 +3118,20 @@ tracks/34/loop_wrap = true
 tracks/34/imported = true
 tracks/34/enabled = true
 tracks/34/keys = PoolRealArray( 0, 1, 1.01328e-06, -7.3202e-07, -4.39584e-07, 0.279726, 0.0140126, -0.0783186, 0.956778, 1, 1, 1, 0.0666667, 1, 1.01328e-06, -7.3202e-07, -4.39584e-07, 0.247226, 0.0556837, -0.0586789, 0.965575, 1, 1, 1, 0.133333, 1, 1.01328e-06, -7.3202e-07, -4.39584e-07, 0.196831, 0.118012, -0.0287827, 0.972884, 1, 1, 1, 0.2, 1, 1.01328e-06, -7.3202e-07, -4.39584e-07, 0.186236, 0.130784, -0.0225779, 0.9735, 1, 1, 1, 0.4, 1, 3.57628e-07, -8.41916e-07, -1.86265e-07, 0.186236, 0.130784, -0.0225779, 0.9735, 1, 1, 1, 0.466667, 1, -4.76837e-07, -1.02445e-06, 2.38419e-07, 0.187942, 0.128735, -0.0235749, 0.973422, 1, 1, 1, 0.533333, 1, 2.68221e-07, -9.22009e-07, 8.19564e-08, 0.213845, 0.0972654, -0.038804, 0.971238, 1, 1, 1, 0.6, 1, 7.15256e-07, -7.59959e-07, -2.90573e-07, 0.257967, 0.0420454, -0.0651371, 0.963038, 1, 1, 1, 0.666667, 1, 1.01328e-06, -7.3202e-07, -4.39584e-07, 0.279726, 0.0140126, -0.0783186, 0.956778, 1, 1, 1 )
+tracks/35/type = "method"
+tracks/35/path = NodePath("Animation_Player")
+tracks/35/interp = 1
+tracks/35/loop_wrap = true
+tracks/35/imported = false
+tracks/35/enabled = true
+tracks/35/keys = {
+"times": PoolRealArray( 0.2 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [  ],
+"method": "animation_callback"
+} ]
+}
 
 [sub_resource type="Animation" id=19]
 length = 0.0416667
@@ -3845,7 +3891,7 @@ anti_aliasing = false
 [sub_resource type="DynamicFont" id=25]
 size = 42
 use_filter = true
-font_data = ExtResource( 9 )
+font_data = ExtResource( 13 )
 
 [node name="Player" type="KinematicBody"]
 script = ExtResource( 1 )
@@ -4064,6 +4110,7 @@ anims/Rifle_fire = SubResource( 18 )
 anims/Rifle_idle = SubResource( 19 )
 anims/Rifle_reload = SubResource( 20 )
 anims/Rifle_unequip = SubResource( 21 )
+script = ExtResource( 8 )
 
 [node name="Camera" type="Camera" parent="Rotation_Helper"]
 transform = Transform( -1, 0, 3.25841e-07, 0, 1, 0, -3.25841e-07, 0, -1, 0, -0.307539, -0.0646362 )
@@ -4075,15 +4122,15 @@ far = 180.0
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -12.3914, 0 )
 
 [node name="Rifle_Point" type="Spatial" parent="Rotation_Helper/Gun_Fire_Points"]
-editor/display_folded = true
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.163315, 10.4607, 7.04431 )
+script = ExtResource( 9 )
 
 [node name="Ray_Cast" type="RayCast" parent="Rotation_Helper/Gun_Fire_Points/Rifle_Point"]
 cast_to = Vector3( 0, 0, 80 )
 
 [node name="Knife_Point" type="Spatial" parent="Rotation_Helper/Gun_Fire_Points"]
-editor/display_folded = true
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.163315, 10.4607, 2.54082 )
+script = ExtResource( 10 )
 
 [node name="Area" type="Area" parent="Rotation_Helper/Gun_Fire_Points/Knife_Point"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.17163, 1.26893 )
@@ -4095,6 +4142,7 @@ shape = SubResource( 22 )
 
 [node name="Pistol_Point" type="Spatial" parent="Rotation_Helper/Gun_Fire_Points"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.436506, 11.3604, 4.77607 )
+script = ExtResource( 11 )
 
 [node name="Gun_Aim_Point" type="Spatial" parent="Rotation_Helper"]
 editor/display_folded = true
@@ -4144,7 +4192,7 @@ margin_left = -2.5
 margin_top = 4.5
 margin_right = 2.5
 margin_bottom = 20.5
-texture = ExtResource( 8 )
+texture = ExtResource( 12 )
 expand = true
 
 [node name="Top_IMG" type="TextureRect" parent="HUD/Crosshair"]
@@ -4156,7 +4204,7 @@ margin_left = -2.5
 margin_top = -20.5
 margin_right = 2.5
 margin_bottom = -4.5
-texture = ExtResource( 8 )
+texture = ExtResource( 12 )
 expand = true
 
 [node name="Left_IMG" type="TextureRect" parent="HUD/Crosshair"]
@@ -4169,7 +4217,7 @@ margin_top = -2.5
 margin_right = 0.5
 margin_bottom = 12.5
 rect_rotation = 90.0
-texture = ExtResource( 8 )
+texture = ExtResource( 12 )
 expand = true
 
 [node name="Right_IMG" type="TextureRect" parent="HUD/Crosshair"]
@@ -4182,7 +4230,7 @@ margin_top = -2.5
 margin_right = 24.5
 margin_bottom = 12.5
 rect_rotation = 90.0
-texture = ExtResource( 8 )
+texture = ExtResource( 12 )
 expand = true
 
 [node name="Panel" type="Panel" parent="HUD"]
